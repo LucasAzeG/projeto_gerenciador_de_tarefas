@@ -1,0 +1,83 @@
+/*DEFINE AS CONFIGURAÇÕES EM TODOS ELEMENTO DA PÁGINA*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*CRIADO VARIÁVEIS*/
+:root{
+    --cor01: #052945;
+    --cor02: #f7f6f5;
+    --cor03: #ffffff;
+    --cor04: #4caf50;
+    --cor05: #ffc107;
+    --cor06: #f44336;
+}
+
+/*FORMATANDO A TAG main PELO ID geral*/
+#geral{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*FORMATANDO O CEBEÇALHO*/
+#cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+    height: 100px;
+    color: var(--cor01);
+}
+
+#div-form{
+    width: 400px;
+    min-height: 500px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: var(--cor01);
+    border-radius: 8px;
+    /*font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+}
+
+label{
+    display: block;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.input-vlr01{
+    width: 320px;
+    min-height: 30px;
+    display: block;
+    margin: 12px auto;
+    border: none;
+    outline: none;
+}
+
+.input-vlr02{
+    width: 320px;
+    min-height: 100px;
+    display: block;
+    margin: 12px auto;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.input-vlr01::placeholder,
+.input-vlr02::placeholder{
+    color: var(--cor01);
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 10px 12px;
+}
+
