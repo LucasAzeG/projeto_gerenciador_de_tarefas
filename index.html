@@ -13,13 +13,34 @@
 
         <section id="div-form">
             <div class="card">
-                <form name="form" id="form" method="post"></form>
+                <form name="form" id="form" method="post">
 
-                <input type="text" name="tarefas" id="tarefas" class="input-vlr01"  maxlength="30" required placeholder="Tarefa">
+                   <input type="text" name="tarefas" id="tarefas" class="input-vlr01"  maxlength="30" required placeholder="Tarefa">
 
-                <input type="text" name="responsavel" id="responsavel" class="input-vlr01"  maxlength="30" required placeholder="Responsável">
+                   <input type="text" name="responsavel" id="responsavel" class="input-vlr01"  maxlength="30" required placeholder="Responsável">
 
-                <input type="text" name="descricao" id="descricao" class="input-vlr01"  maxlength="300" required placeholder="Descrição">
+                   <input type="text" name="descricao" id="descricao" class="input-vlr01"  maxlength="300" required placeholder="Descrição">
+
+                   <p>Prioridade</p>
+
+                   <input type="radio" id="baixa" name="prioridade" value="baixa">
+                   <label for="baixa">Baixa</label>
+
+                   <input type="radio" id="media" name="prioridade" value="media">
+                   <label for="media">Média</label>
+
+                   <input type="radio" id="alta" name="prioridade" value="alta">
+                   <label for="alta">Alta</label>
+
+                   <label for="datatarefa">Data Tarefa</label>
+                   <input type="date" name="datatarefa" id="datatarefa" class="input-vlr03" required>
+                   
+                   <div id="div-btns">
+                      <button type="submit" id="btn-adicionar">Adicionar Tarefa</button>
+                      <button type="reset" id="btn-limpar">Limpar</button>
+                   </div>
+
+                </form>
 
             </div>
         </section>
