@@ -3,7 +3,11 @@ const btnAdicionar = document.getElementById('btn-adicionar');
 const listaTarefas = document.getElementById('lista-tarefas');
 
 //Clicar no Botão
-btnAdicionar.addEventListener('click', function (){
+btnAdicionar.addEventListener('click', function (e){
+
+    //Evitar que a página recarregue
+    e.preventDefault();
+
     //Pegando os valores preenchidos no formulario
     const tarefa = document.getElementById('tarefa').value;
     const responsavel = document.getElementById('responsavel').value;
@@ -25,7 +29,7 @@ btnAdicionar.addEventListener('click', function (){
             <p><strong>Responsável:</strong> ${responsavel}</p>
             <p><strong>Descrição:</strong> ${descricao}</p>
             <p><strong>Prioridade:</strong> ${prioridade}</p>
-            <p><strong>Data:</strong> ${data}</p>
+            <p><strong>Data:</strong> ${datatarefa}</p>
         </div>
     `;
 
