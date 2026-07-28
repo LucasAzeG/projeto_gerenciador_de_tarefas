@@ -136,3 +136,28 @@ button{
     outline: none;
     font-size: 0.9em;
 }
+
+#div-status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.card-status {
+    background-color: var(--cor01);
+    color: var(--cor03);
+    width: 160px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-status h3 {
+    font-size: 1.1em;
+    margin: 0;
+}
