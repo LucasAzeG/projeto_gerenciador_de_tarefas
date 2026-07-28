@@ -61,6 +61,7 @@ label{
     margin: 12px auto;
     border: none;
     outline: none;
+    padding: 0 12px;
 }
 
 .input-vlr02{
@@ -71,6 +72,7 @@ label{
     border: none;
     resize: none;
     outline: none;
+    padding: 10px 12px;
 }
 
 .input-vlr01::placeholder,
@@ -78,7 +80,8 @@ label{
     color: var(--cor01);
     font-size: 1.2em;
     font-style: italic;
-    padding: 10px 12px;
+    padding: 0px;
+    margin: 0;
 }
 
 #form p {
@@ -99,4 +102,37 @@ label{
     display: inline;
     color: var(--cor03);
     margin: 0;
+}
+
+label[for=datatarefa]{
+    color: var(--cor03);
+    display: block;
+    margin: 15px auto;
+}
+
+.input-vlr03 {
+    width: 320px;
+    min-height: 30px;
+    display: block;
+    margin: 12px auto;
+    border: none;
+    outline: none;
+}
+
+#div-btns{
+    width: 320px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 152px;
+    height: 35px;
+    background-color: var(--cor03);
+    cursor: pointer;
+    color: var(--cor01);
+    border: none;
+    outline: none;
+    font-size: 0.9em;
 }
