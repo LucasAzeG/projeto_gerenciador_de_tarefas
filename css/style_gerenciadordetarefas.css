@@ -81,3 +81,9 @@ label{
     padding: 10px 12px;
 }
 
+#form p {
+    color: var(--cor03);
+    margin-top: 15px;
+    margin: 20px auto;
+}
+
