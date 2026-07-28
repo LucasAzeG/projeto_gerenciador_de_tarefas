@@ -87,3 +87,16 @@ label{
     margin: 20px auto;
 }
 
+.div-prioridade{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.div-prioridade label {
+    display: inline;
+    color: var(--cor03);
+    margin: 0;
+}
