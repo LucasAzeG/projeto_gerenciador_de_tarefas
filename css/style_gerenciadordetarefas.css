@@ -22,8 +22,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    padding: 20px;
 }
 
 /*FORMATANDO O CEBEÇALHO*/
@@ -172,33 +172,64 @@ button{
 
 #quadrados_urgencia{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 15px;
-    margin: 20px auto;
-    width: 585px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#secao-topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#div-prioridades-baixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .card-prio {
-    color: black;
     width: 120px;
-    height: 90px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    text-align: center;
     font-weight: bold;
-    padding: 10px;
 }
 
 .card-prio.baixa {
     background-color: var(--cor04);
+    color: black;
 }
 
 .card-prio.media {
     background-color: var(--cor05);
+    color: black;
 }
 
 .card-prio.alta {
     background-color: var(--cor06);
+    color: black;
+}
+
+#div-rotulos-status {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.rotulo-status{
+    width: 120px;
+    text-align: center;
+    font-size: 0.9;
+    font-weight: bold;
+    color: var(--cor01);
+    text-transform: uppercase;
 }

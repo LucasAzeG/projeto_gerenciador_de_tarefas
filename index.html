@@ -21,74 +21,85 @@
 
            <div id="div-form">
                
-            <form name="form" id="form" method="post">
+               <form name="form" id="form" method="post">
 
-                <input type="text" name="tarefa" id="tarefa" class="input-vlr01"  maxlength="30" required placeholder="Tarefa">
+                   <input type="text" name="tarefa" id="tarefa" class="input-vlr01"  maxlength="30" required placeholder="Tarefa">
 
-                <input type="text" name="responsavel" id="responsavel" class="input-vlr01"  maxlength="30" required placeholder="Responsável">
+                   <input type="text" name="responsavel" id="responsavel" class="input-vlr01"  maxlength="30" required placeholder="Responsável">
 
-                <textarea name="descricao" id="descricao" class="input-vlr02" maxlength="300" required placeholder="Descrição"></textarea>
+                   <textarea name="descricao" id="descricao" class="input-vlr02" maxlength="300" required placeholder="Descrição"></textarea>
 
-                <p>Prioridade</p>
-                <div class="div-prioridade">
+                   <p>Prioridade</p>
+                   <div class="div-prioridade">
                       
 
-                    <input type="radio" id="baixa" name="prioridade" value="baixa">
-                    <label for="baixa">Baixa</label>
+                       <input type="radio" id="baixa" name="prioridade" value="baixa">
+                       <label for="baixa">Baixa</label>
 
-                    <input type="radio" id="media" name="prioridade" value="media">
-                    <label for="media">Média</label>
+                       <input type="radio" id="media" name="prioridade" value="media">
+                       <label for="media">Média</label>
 
-                    <input type="radio" id="alta" name="prioridade" value="alta">
-                    <label for="alta">Alta</label>
-                </div>
+                       <input type="radio" id="alta" name="prioridade" value="alta">
+                       <label for="alta">Alta</label>
+                   </div>
 
-                <label for="datatarefa">Data Tarefa</label>
-                <input type="date" name="datatarefa" id="datatarefa" class="input-vlr03" required>
+                   <label for="datatarefa">Data Tarefa</label>
+                   <input type="date" name="datatarefa" id="datatarefa" class="input-vlr03" required>
                     
                    
-                <div id="div-btns">
-                    <button type="button" id="btn-adicionar">Adicionar Tarefa</button>
-                    <button type="reset" id="btn-limpar">Limpar</button>
-                    </div>
-            </form>
+                   <div id="div-btns">
+                       <button type="button" id="btn-adicionar">Adicionar Tarefa</button>
+                       <button type="reset" id="btn-limpar">Limpar</button>
+                   </div>
+               </form>
             </div>
-
-
-                
-
-                
 
             <div id="div-status">
                 <div class="card-status">
                     <h3>Em aberto</h3>
                 </div>
-                    
-                <div class="card-status">
-                    <h3>Em andamento</h3>
+                 
+               <div class="card-status">
+                   <h3>Em andamento</h3>
                 </div>
-                    
+                 
                 <div class="card-status">
-                    <h3>Finalizada</h3>
+                  <h3>Finalizada</h3>
                 </div>
 
             </div>
-        
+
         </section>
 
-        <div  id="quadrados_urgencia">
-            <div class="card-prio baixa">
-                <h3>BAIXA</h3>
-            </div>
-            <div class="card-prio media">
-                <h3>MÉDIA</h3>
-            </div>
-            <div class="card-prio alta">
-                <h3>ALTA</h3>
-            </div>
-        </div>
 
-        <section id="lista-tarefas"></section>
+            <div id="div-prioridade-baixo">
+        
+               <div  id="quadrados_urgencia">
+                  <div class="card-prio baixa">
+                     <h3>BAIXA</h3>
+                  </div>
+                  <div class="card-prio media">
+                     <h3>MÉDIA</h3>
+                  </div>
+                  <div class="card-prio alta">
+                     <h3>ALTA</h3>
+                  </div>
+               </div>
+            
+
+           
+
+        <div id="div-rotulos-status">
+            <span class="rotulo-status">ABERTO</span>
+            <span class="rotulo-status">EM ANDAMENTO</span>
+            <span class="rotulo-status">FINALIZADA</span>
+        </div>
+    </div>
+
+    
+
+    <section id="lista-tarefas"></section>
+
 
     </main> 
 </body>
