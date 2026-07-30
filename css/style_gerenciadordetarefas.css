@@ -169,3 +169,36 @@ button{
     font-size: 1.1em;
     margin: 0;
 }
+
+#quadrados_urgencia{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 20px auto;
+    width: 585px;
+}
+
+.card-prio {
+    color: black;
+    width: 120px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card-prio.baixa {
+    background-color: var(--cor04);
+}
+
+.card-prio.media {
+    background-color: var(--cor05);
+}
+
+.card-prio.alta {
+    background-color: var(--cor06);
+}
