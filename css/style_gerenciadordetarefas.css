@@ -18,12 +18,12 @@
 
 /*FORMATANDO A TAG main PELO ID geral*/
 #geral{
-    margin: 20px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /*FORMATANDO O CEBEÇALHO*/
@@ -32,8 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 60px;
-    height: 100px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
     color: var(--cor01);
 }
 
@@ -173,10 +173,10 @@ button{
 #quadrados_urgencia{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: -90px;
 }
 
 #secao-topo{
@@ -188,9 +188,9 @@ button{
 
 #div-prioridades-baixo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .card-prio {
@@ -219,17 +219,37 @@ button{
 }
 
 #div-rotulos-status {
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 40px;
+    margin-top: 20px;
+    margin-left: -85px;
 }
 
 .rotulo-status{
     width: 120px;
     text-align: center;
-    font-size: 0.9;
+    font-size: 0.9em;
     font-weight: bold;
     color: var(--cor01);
     text-transform: uppercase;
+    border-bottom: 2px solid var(--cor01);
+    padding: 6px;
+}
+
+#container-respostas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;            /* Mesmo espaçamento dos quadrados/rótulos */
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 80px;    /* Use AQUI o mesmo margin-left que você usou nas legendas! */
+}
+
+.coluna-status {
+    width: 120px;         /* Mesma largura de 120px dos rótulos */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
