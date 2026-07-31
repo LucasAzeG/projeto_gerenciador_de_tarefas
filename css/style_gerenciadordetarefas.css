@@ -1,23 +1,23 @@
-/*DEFINE AS CONFIGURAÇÕES EM TODOS ELEMENTO DA PÁGINA*/
-*{
-    margin: 0px;
-    padding: 0px;
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/*CRIADO VARIÁVEIS*/
-:root{
-    --cor01: #052945;
-    --cor02: #f7f6f5;
-    --cor03: #ffffff;
-    --cor04: #4caf50;
-    --cor05: #ffc107;
-    --cor06: #f44336;
+/* VARIÁVEIS DE CORES */
+:root {
+    --cor01: #052945; /* Azul Escuro */
+    --cor02: #f7f6f5; /* Cinza Claro */
+    --cor03: #ffffff; /* Branco */
+    --cor04: #4caf50; /* Verde (Baixa) */
+    --cor05: #fbc02d; /* Amarelo (Média) */
+    --cor06: #d9534f; /* Vermelho (Alta) */
 }
 
-/*FORMATANDO A TAG main PELO ID geral*/
-#geral{
+/* ESTRUTURA PRINCIPAL */
+#geral {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -26,36 +26,43 @@
     padding: 20px 0;
 }
 
-/*FORMATANDO O CEBEÇALHO*/
-#cabecalho{
+/* CABEÇALHO */
+#cabecalho {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 0;
     margin-bottom: 20px;
     color: var(--cor01);
 }
 
-#div-form{
+/* ÁREA SUPERIOR: FORMULÁRIO + QUADROS AZUIS DE STATUS */
+#container-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 25px;               
+    margin: 20px auto;
+}
+
+/* FORMULÁRIO */
+#div-form {
     width: 400px;
     min-height: 500px;
-    margin: 0px auto;
     padding: 20px;
     background-color: var(--cor01);
     border-radius: 8px;
-    /*font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
 }
 
-
-label{
+label {
     display: block;
-    margin: 10px 0px;
+    margin: 10px 0;
     text-transform: uppercase;
     font-size: 0.8em;
 }
 
-.input-vlr01{
+.input-vlr01 {
     width: 320px;
     min-height: 30px;
     display: block;
@@ -65,7 +72,7 @@ label{
     padding: 0 12px;
 }
 
-.input-vlr02{
+.input-vlr02 {
     width: 320px;
     min-height: 100px;
     display: block;
@@ -77,21 +84,18 @@ label{
 }
 
 .input-vlr01::placeholder,
-.input-vlr02::placeholder{
+.input-vlr02::placeholder {
     color: var(--cor01);
     font-size: 1.2em;
     font-style: italic;
-    padding: 0px;
-    margin: 0;
 }
 
 #form p {
     color: var(--cor03);
-    margin-top: 15px;
-    margin: 20px auto;
+    margin: 20px auto 10px auto;
 }
 
-.div-prioridade{
+.div-prioridade {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -105,7 +109,7 @@ label{
     margin: 0;
 }
 
-label[for=datatarefa]{
+label[for=datatarefa] {
     color: var(--cor03);
     display: block;
     margin: 15px auto;
@@ -118,16 +122,17 @@ label[for=datatarefa]{
     margin: 12px auto;
     border: none;
     outline: none;
+    padding: 0 8px;
 }
 
-#div-btns{
+#div-btns {
     width: 320px;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
 }
 
-button{
+button {
     width: 152px;
     height: 35px;
     background-color: var(--cor03);
@@ -136,20 +141,14 @@ button{
     border: none;
     outline: none;
     font-size: 0.9em;
+    font-weight: bold;
 }
 
-#container-principal {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    gap: 25px;               
-    margin: 20px auto;
-}
-
+/* QUADROS AZUIS DE STATUS (À DIREITA DO FORMULÁRIO) */
 #div-status {
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
 }
 
 .card-status {
@@ -170,37 +169,34 @@ button{
     margin: 0;
 }
 
-#quadrados_urgencia{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    margin-left: -90px;
-}
-
-#secao-topo{
+/* ÁREA INFERIOR: QUADRADOS DE PRIORIDADE E KANBAN */
+#div-prioridade-baixo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto 0 auto;
+}
+
+/* BLOCOS COLORIDOS DE PRIORIDADE */
+#quadrados_urgencia {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
     margin-bottom: 25px;
 }
 
-#div-prioridades-baixo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .card-prio {
-    width: 120px;
+    flex: 1;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     font-weight: bold;
+    text-align: center;
 }
 
 .card-prio.baixa {
@@ -218,38 +214,145 @@ button{
     color: black;
 }
 
-#div-rotulos-status {
-    width: 100%;
+/* ESTRUTURA DAS COLUNAS KANBAN */
+#area-kanban {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-    margin-left: -85px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
 }
 
-.rotulo-status{
-    width: 120px;
+.coluna-kanban {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RÓTULOS/TÍTULOS DAS COLUNAS (ABERTO, EM ANDAMENTO, FINALIZADA) */
+.rotulo-status {
+    width: 100%;
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
     color: var(--cor01);
     text-transform: uppercase;
     border-bottom: 2px solid var(--cor01);
-    padding: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 15px; /* DISTÂNCIA ENTRE A LEGENDA E O CARD */
 }
 
-#container-respostas {
-    display: flex;
-    justify-content: center;
-    gap: 15px;            /* Mesmo espaçamento dos quadrados/rótulos */
+/* LISTA DE CARDS DENTRO DA COLUNA */
+.lista-cards {
     width: 100%;
-    margin-top: 15px;
-    margin-left: 80px;    /* Use AQUI o mesmo margin-left que você usou nas legendas! */
-}
-
-.coluna-status {
-    width: 120px;         /* Mesma largura de 120px dos rótulos */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+}
+
+/* ESTILO DO CARTÃO DE TAREFA */
+.card-resposta {
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 6px solid var(--cor06); /* Borda padrão vermelha */
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card-resposta h3 {
+    font-size: 1.05em;
+    font-weight: bold;
+    color: #112d4e;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.card-resposta h2 {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+}
+
+.card-resposta p {
+    font-size: 0.8em;
+    color: #444;
+    margin: 4px 0 8px 0;
+    word-break: break-word;
+}
+
+.card-resposta .txt-destaque {
+    font-size: 0.78em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2px 0;
+}
+
+/* LINKS DE AÇÃO NO CARD */
+.links-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 6px;
+}
+
+.links-card a {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #112d4e;
+    text-decoration: none;
+}
+
+.links-card a:hover {
+    text-decoration: underline;
+}
+
+.btn-remover-card {
+    align-self: center;
+    margin-top: 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-remover-card:hover {
+    text-decoration: underline;
+}
+
+/* DINÂMICA DE CORES DOS CARDS CONFORME A PRIORIDADE */
+.card-resposta.baixa {
+    border-left-color: var(--cor04);
+}
+.card-resposta.baixa .txt-destaque,
+.card-resposta.baixa .btn-remover-card {
+    color: var(--cor04);
+}
+
+.card-resposta.media,
+.card-resposta.média {
+    border-left-color: var(--cor05);
+}
+.card-resposta.media .txt-destaque,
+.card-resposta.media .btn-remover-card,
+.card-resposta.média .txt-destaque,
+.card-resposta.média .btn-remover-card {
+    color: var(--cor05);
+}
+
+.card-resposta.alta {
+    border-left-color: var(--cor06);
+}
+.card-resposta.alta .txt-destaque,
+.card-resposta.alta .btn-remover-card {
+    color: var(--cor06);
 }
